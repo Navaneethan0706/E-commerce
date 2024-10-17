@@ -24,24 +24,4 @@ function updateCart() {
 
 function toggleChatbot() {
     const chatbot = document.getElementById('chatbot');
-    chatbot.style.display = chatbot.style.display === 'block' ? 'none' : 'block';
-}
-
-function sendMessage() {
-    const input = document.getElementById('chatbot-input');
-    const messages = document.getElementById('chatbot-messages');
-
-    if (input.value.trim() === '') return;
-
-    const userMessage = document.createElement('div');
-    userMessage.textContent = `You: ${input.value}`;
-    messages.appendChild(userMessage);
-
-    // Simulating a response from the chatbot
-    const botMessage = document.createElement('div');
-    botMessage.textContent = `Bot: I'm here to help you with your shopping!`;
-    messages.appendChild(botMessage);
-
-    input.value = '';
-    messages.scrollTop = messages.scrollHeight; // Scroll to bottom
-}
+    chatbot.style.display = chatbot.style.display === 'block'
